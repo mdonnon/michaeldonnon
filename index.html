@@ -179,7 +179,42 @@
     .btn:hover { background: var(--signal); transform: translateY(-1px); }
     .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
     .btn.ghost:hover { background: var(--ink); color: var(--paper); }
-    @media (max-width: 760px) { .nav ul { display: none; } }
+
+    /* hamburger toggle — hidden on desktop */
+    .nav-toggle {
+      display: none; flex-direction: column; justify-content: center; gap: 5px;
+      width: 44px; height: 44px; padding: 0; margin: 0 -10px 0 0;
+      background: none; border: 0; cursor: pointer; border-radius: 10px;
+    }
+    .nav-toggle span {
+      display: block; width: 24px; height: 2px; margin: 0 auto;
+      background: var(--ink); border-radius: 2px;
+      transition: transform .25s ease, opacity .2s ease;
+    }
+    .nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-cta-mobile { display: none; }
+
+    @media (max-width: 760px) {
+      .nav-toggle { display: flex; }
+      #primary-menu {
+        position: absolute; top: 64px; left: 0; right: 0;
+        background: rgba(251,250,246,0.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden;
+        transition: max-height .3s ease;
+      }
+      #primary-menu.open { max-height: 460px; }
+      .nav ul { flex-direction: column; gap: 0; padding: 6px 0 12px; }
+      .nav ul li { width: 100%; }
+      .nav ul a { display: block; padding: 14px 24px; font-size: 1.02rem; }
+      .nav ul a:hover, .nav ul a:focus-visible { background: var(--signal-soft); }
+      .nav > .btn { display: none; }            /* hide header CTA; surfaced in menu instead */
+      .nav-cta-mobile { display: block; margin-top: 6px; padding: 0 24px; }
+      .nav-cta-mobile a { display: block; text-align: center; }
+    }
 
     /* ===================== Hero ===================== */
     .hero {
@@ -428,6 +463,24 @@
       html { scroll-behavior: auto; }
     }
     :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
+
+    /* ===================== Mobile spacing tune-up ===================== */
+    @media (max-width: 640px) {
+      .wrap { padding: 0 20px; }
+      section { padding: 60px 0; }
+      .hero { padding: 80px 0 0; }
+      .hero h1 { font-size: clamp(2.1rem, 9vw, 3.2rem); }
+      .hero p.sub { font-size: 1.05rem; }
+      .hero .role { font-size: 0.78rem; }
+      .hero-cta { margin-top: 28px; }
+      .curve { margin-top: 44px; }
+      .logos { padding: 48px 0; }
+      .cards, .proj-grid { margin-top: 32px; }
+      .kpi { padding: 26px 18px; }
+      footer { padding: 64px 0 32px; }
+      .foot-meta { margin-top: 48px; }
+      .hero-cta .btn, .foot-cta .btn { flex: 1 1 auto; text-align: center; }
+    }
   </style>
 </head>
 
@@ -437,7 +490,10 @@
   <header>
     <div class="wrap nav">
       <a class="logo" href="/">MICHAEL<span>DONNON</span></a>
-      <nav aria-label="Primary">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-menu" aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#highlights">Highlights</a></li>
@@ -445,6 +501,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#press">Press</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li class="nav-cta-mobile"><a class="btn" href="https://www.linkedin.com/in/michaeldonnon" rel="me">Connect on LinkedIn</a></li>
         </ul>
       </nav>
       <a class="btn" href="https://www.linkedin.com/in/michaeldonnon" rel="me">Connect on LinkedIn</a>
@@ -862,6 +919,20 @@
   </footer>
 
   <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const primaryMenu = document.getElementById('primary-menu');
+    if (navToggle && primaryMenu) {
+      const setMenu = (open) => {
+        primaryMenu.classList.toggle('open', open);
+        navToggle.classList.toggle('is-open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      };
+      navToggle.addEventListener('click', () => setMenu(!primaryMenu.classList.contains('open')));
+      primaryMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    }
+
     // Scroll reveal
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
