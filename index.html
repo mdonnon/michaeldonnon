@@ -399,11 +399,18 @@
     }
     .press-item:first-child { border-top: 1px solid var(--line); }
     .press-meta {
-      display: flex; flex-direction: column; gap: 4px;
+      display: flex; align-items: center; gap: 12px;
       font-family: var(--mono); font-size: 0.82rem;
     }
+    .press-logo {
+      width: 34px; height: 34px; flex: none;
+      object-fit: contain; border-radius: 7px;
+      background: #fff; border: 1px solid var(--line); padding: 4px;
+    }
+    .press-pubinfo { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
     .press-pub { color: var(--ink); font-weight: 600; font-size: 0.92rem; }
     .press-date { color: var(--mist); }
+    .press-body { min-width: 0; }
     .press-link {
       text-decoration: none; color: var(--ink); display: block;
     }
@@ -416,12 +423,19 @@
       content: "  ↗"; font-family: var(--mono); color: var(--signal);
       font-weight: 500; font-size: 0.95rem;
     }
+    .press-lead {
+      display: block; margin-top: 14px;
+      width: 100%; max-width: 440px; aspect-ratio: 16 / 9;
+      object-fit: cover; border-radius: 10px;
+      border: 1px solid var(--line); background: var(--line);
+    }
     .press-context {
-      font-size: 0.92rem; color: var(--mist); margin-top: 8px;
+      font-size: 0.92rem; color: var(--mist); margin-top: 14px;
     }
     @media (max-width: 700px) {
-      .press-item { grid-template-columns: 1fr; gap: 10px; }
-      .press-meta { flex-direction: row; gap: 12px; }
+      .press-item { grid-template-columns: 1fr; gap: 12px; }
+      .press-meta { flex-direction: row; gap: 10px; }
+      .press-lead { max-width: 100%; }
     }
     /* ===================== FAQ ===================== */
     .faq details {
@@ -709,163 +723,253 @@
       <ul class="press-list">
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Nationwide Newsroom</span>
-            <span class="press-date">Feb 2026</span>
+            <img class="press-logo" src="images/press/logos/nationwide.png" alt="Nationwide Newsroom logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Nationwide Newsroom</span>
+              <span class="press-date">Feb 2026</span>
+            </div>
           </div>
-          <a class="press-link" href="https://news.nationwide.com/nationwide-whisker-2026-partnership/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://news.nationwide.com/nationwide-whisker-2026-partnership/" target="_blank" rel="noopener">
             <h3>Nationwide and Whisker Labs Expand Strategic Initiative to Deliver 500,000 More Ting Sensors for Fire Prevention</h3>
           </a>
-          <p class="press-context">My role: VP of Marketing at Whisker Labs — leading brand, growth, and partner marketing across the Ting program.</p>
+            <img class="press-lead" src="images/press/nationwide.jpg" alt="Nationwide and Whisker Labs Expand Strategic Initiative to Deliver 500,000 More Ting Sensors for Fire Prevention — Nationwide Newsroom" loading="lazy">
+            <p class="press-context">My role: VP of Marketing at Whisker Labs — leading brand, growth, and partner marketing across the Ting program.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Digital Insurance</span>
-            <span class="press-date">Feb 2026</span>
+            <img class="press-logo" src="images/press/logos/diginsurance.png" alt="Digital Insurance logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Digital Insurance</span>
+              <span class="press-date">Feb 2026</span>
+            </div>
           </div>
-          <a class="press-link" href="https://www.dig-in.com/news/nationwide-expands-ting-aig-completes-acquisitions-insurtech" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://www.dig-in.com/news/nationwide-expands-ting-aig-completes-acquisitions-insurtech" target="_blank" rel="noopener">
             <h3>Nationwide expands Ting partnership to deliver 500,000 more sensors</h3>
           </a>
-          <p class="press-context">My role: VP of Marketing at Whisker Labs — overseeing partner marketing for the expansion.</p>
+            <img class="press-lead" src="images/press/diginsurance.jpg" alt="Nationwide expands Ting partnership to deliver 500,000 more sensors — Digital Insurance" loading="lazy">
+            <p class="press-context">My role: VP of Marketing at Whisker Labs — overseeing partner marketing for the expansion.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Deadline</span>
-            <span class="press-date">Apr 2023</span>
+            <img class="press-logo" src="images/press/logos/deadline.png" alt="Deadline logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Deadline</span>
+              <span class="press-date">Apr 2023</span>
+            </div>
           </div>
-          <a class="press-link" href="https://deadline.com/2023/04/paramount-plus-formula-1-strategic-agreement-1235321879/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://deadline.com/2023/04/paramount-plus-formula-1-strategic-agreement-1235321879/" target="_blank" rel="noopener">
             <h3>Paramount+ Gears Up For Pact With Formula 1</h3>
           </a>
-          <p class="press-context">My role: SVP, Demand Marketing & User Acquisition (International) — led media strategy and partnership execution for the global F1 deal.</p>
+            <img class="press-lead" src="images/press/deadline-f1.jpg" alt="Paramount+ Gears Up For Pact With Formula 1 — Deadline" loading="lazy">
+            <p class="press-context">My role: SVP, Demand Marketing & User Acquisition (International) — led media strategy and partnership execution for the global F1 deal.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Variety (Australia)</span>
-            <span class="press-date">Apr 2022</span>
+            <img class="press-logo" src="images/press/logos/variety.png" alt="Variety (Australia) logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Variety (Australia)</span>
+              <span class="press-date">Apr 2022</span>
+            </div>
           </div>
-          <a class="press-link" href="https://au.variety.com/2022/tv/news/halo-hologram-sydney-1824" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://au.variety.com/2022/tv/news/halo-hologram-sydney-1824" target="_blank" rel="noopener">
             <h3>Paramount Beams 'World's Tallest Hologram' into Sydney to Celebrate 'Halo' Series</h3>
           </a>
-          <p class="press-context">My role: SVP, Demand Marketing — led international marketing strategy for the Halo launch and the global 'HALOgram' activation across 4 markets.</p>
+            <img class="press-lead" src="images/press/variety-halo.jpg" alt="Paramount Beams 'World's Tallest Hologram' into Sydney to Celebrate 'Halo' Series — Variety (Australia)" loading="lazy">
+            <p class="press-context">My role: SVP, Demand Marketing — led international marketing strategy for the Halo launch and the global 'HALOgram' activation across 4 markets.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Paramount Investor Relations</span>
-            <span class="press-date">May 2022</span>
+            <img class="press-logo" src="images/press/logos/paramount.png" alt="Paramount Investor Relations logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Paramount Investor Relations</span>
+              <span class="press-date">May 2022</span>
+            </div>
           </div>
-          <a class="press-link" href="https://ir.paramount.com/news-releases/news-release-details/paramount-reveals-uk-launch-date-pricing-distribution-partners" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://ir.paramount.com/news-releases/news-release-details/paramount-reveals-uk-launch-date-pricing-distribution-partners" target="_blank" rel="noopener">
             <h3>Paramount+ Reveals UK Launch Date, Pricing, Distribution Partners & More</h3>
           </a>
-          <p class="press-context">My role: SVP, Demand Marketing & User Acquisition — led the marketing rollout strategy across the UK, Ireland, Italy, Germany, France and Switzerland launches.</p>
+            <p class="press-context">My role: SVP, Demand Marketing & User Acquisition — led the marketing rollout strategy across the UK, Ireland, Italy, Germany, France and Switzerland launches.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Hemisphere Media Group / SEC</span>
-            <span class="press-date">Apr 2021</span>
+            <img class="press-logo" src="images/press/logos/sec.png" alt="Hemisphere Media Group / SEC logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Hemisphere Media Group / SEC</span>
+              <span class="press-date">Apr 2021</span>
+            </div>
           </div>
-          <a class="press-link" href="https://www.sec.gov/Archives/edgar/data/0001567345/000110465921045279/tm2111847d1_ex99-2.htm" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://www.sec.gov/Archives/edgar/data/0001567345/000110465921045279/tm2111847d1_ex99-2.htm" target="_blank" rel="noopener">
             <h3>Hemisphere Media Group Acquires Leading U.S. Hispanic Subscription Video-on-Demand Service Pantaya</h3>
           </a>
-          <p class="press-context">My role: SVP, Acquisition Marketing & Strategy at Lionsgate — built Pantaya from zero to ~900K subscribers, enabling the $124M sale.</p>
+            <p class="press-context">My role: SVP, Acquisition Marketing & Strategy at Lionsgate — built Pantaya from zero to ~900K subscribers, enabling the $124M sale.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Deadline</span>
-            <span class="press-date">May 2022</span>
+            <img class="press-logo" src="images/press/logos/deadline.png" alt="Deadline logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Deadline</span>
+              <span class="press-date">May 2022</span>
+            </div>
           </div>
-          <a class="press-link" href="https://deadline.com/2022/05/televisaunivision-streamer-pantaya-hemisphere-media-vix-1235019271/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://deadline.com/2022/05/televisaunivision-streamer-pantaya-hemisphere-media-vix-1235019271/" target="_blank" rel="noopener">
             <h3>TelevisaUnivision Acquires Streamer Pantaya From Hemisphere Media</h3>
           </a>
-          <p class="press-context">My role: Built the asset that ultimately rolled into TelevisaUnivision's global streaming offering ViX+.</p>
+            <img class="press-lead" src="images/press/deadline-pantaya.jpg" alt="TelevisaUnivision Acquires Streamer Pantaya From Hemisphere Media — Deadline" loading="lazy">
+            <p class="press-context">My role: Built the asset that ultimately rolled into TelevisaUnivision's global streaming offering ViX+.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">The Hollywood Reporter</span>
-            <span class="press-date">May 2016</span>
+            <img class="press-logo" src="images/press/logos/thr.png" alt="The Hollywood Reporter logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">The Hollywood Reporter</span>
+              <span class="press-date">May 2016</span>
+            </div>
           </div>
-          <a class="press-link" href="https://www.hollywoodreporter.com/business/digital/kevin-hart-launch-streaming-service-879567/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://www.hollywoodreporter.com/business/digital/kevin-hart-launch-streaming-service-879567/" target="_blank" rel="noopener">
             <h3>Kevin Hart to Launch Streaming Service, Mobile Game With Lionsgate</h3>
           </a>
-          <p class="press-context">My role: SVP, Acquisition Marketing at Lionsgate — co-led the marketing strategy behind the Laugh Out Loud Network launch.</p>
+            <img class="press-lead" src="images/press/thr-kevinhart.jpg" alt="Kevin Hart to Launch Streaming Service, Mobile Game With Lionsgate — The Hollywood Reporter" loading="lazy">
+            <p class="press-context">My role: SVP, Acquisition Marketing at Lionsgate — co-led the marketing strategy behind the Laugh Out Loud Network launch.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Variety</span>
-            <span class="press-date">Feb 2018</span>
+            <img class="press-logo" src="images/press/logos/variety.png" alt="Variety logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Variety</span>
+              <span class="press-date">Feb 2018</span>
+            </div>
           </div>
-          <a class="press-link" href="https://variety.com/2018/digital/news/kevin-hart-cold-as-balls-series-youtube-1202690741/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://variety.com/2018/digital/news/kevin-hart-cold-as-balls-series-youtube-1202690741/" target="_blank" rel="noopener">
             <h3>Kevin Hart &lsquo;Cold as Balls&rsquo; Ice-Bath Comedy Interview Series Premieres</h3>
           </a>
-          <p class="press-context">My role: SVP, Acquisition Marketing at Lionsgate &mdash; supported launch and audience growth for the LOL Network breakout that went on to over 320M lifetime views by season 3.</p>
+            <img class="press-lead" src="images/press/variety-coldasballs.png" alt="Kevin Hart Cold as Balls Ice-Bath Comedy Interview Series Premieres — Variety" loading="lazy">
+            <p class="press-context">My role: SVP, Acquisition Marketing at Lionsgate &mdash; supported launch and audience growth for the LOL Network breakout that went on to over 320M lifetime views by season 3.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">The Hollywood Reporter</span>
-            <span class="press-date">May 2018</span>
+            <img class="press-logo" src="images/press/logos/thr.png" alt="The Hollywood Reporter logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">The Hollywood Reporter</span>
+              <span class="press-date">May 2018</span>
+            </div>
           </div>
-          <a class="press-link" href="https://www.hollywoodreporter.com/news/general-news/kevin-harts-laugh-loud-renews-talk-show-cold-as-balls-1096256" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://www.hollywoodreporter.com/news/general-news/kevin-harts-laugh-loud-renews-talk-show-cold-as-balls-1096256" target="_blank" rel="noopener">
             <h3>Kevin Hart&rsquo;s Laugh Out Loud Renews Breakout Talk Show &lsquo;Cold As Balls&rsquo;</h3>
           </a>
-          <p class="press-context">My role: Drove acquisition marketing across the LOL Network as Cold As Balls became its most-watched series and earned a two-season renewal.</p>
+            <img class="press-lead" src="images/press/thr-coldasballs.jpg" alt="Kevin Harts Laugh Out Loud Renews Breakout Talk Show Cold As Balls — The Hollywood Reporter" loading="lazy">
+            <p class="press-context">My role: Drove acquisition marketing across the LOL Network as Cold As Balls became its most-watched series and earned a two-season renewal.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">The Comic&rsquo;s Comic</span>
-            <span class="press-date">May 2017</span>
+            <img class="press-logo" src="images/press/logos/comicscomic.png" alt="The Comic&rsquo;s Comic logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">The Comic&rsquo;s Comic</span>
+              <span class="press-date">May 2017</span>
+            </div>
           </div>
-          <a class="press-link" href="https://thecomicscomic.com/2017/05/05/kevin-hart-to-star-in-what-the-fit-webseries-for-youtube-via-his-laugh-out-loud-network/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://thecomicscomic.com/2017/05/05/kevin-hart-to-star-in-what-the-fit-webseries-for-youtube-via-his-laugh-out-loud-network/" target="_blank" rel="noopener">
             <h3>Kevin Hart to star in &ldquo;What The Fit?&rdquo; webseries for YouTube via his Laugh Out Loud Network</h3>
           </a>
-          <p class="press-context">My role: Led acquisition marketing for the YouTube Premium series that became one of the network&rsquo;s defining franchises, running three seasons through 2020.</p>
+            <p class="press-context">My role: Led acquisition marketing for the YouTube Premium series that became one of the network&rsquo;s defining franchises, running three seasons through 2020.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Variety</span>
-            <span class="press-date">Oct 2015</span>
+            <img class="press-logo" src="images/press/logos/variety.png" alt="Variety logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Variety</span>
+              <span class="press-date">Oct 2015</span>
+            </div>
           </div>
-          <a class="press-link" href="https://variety.com/2015/digital/news/tribeca-shortlist-launch-lionsgate-svod-1201607540/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://variety.com/2015/digital/news/tribeca-shortlist-launch-lionsgate-svod-1201607540/" target="_blank" rel="noopener">
             <h3>Tribeca, Lionsgate Launch 'Shortlist' Movie SVOD Service With a Human Touch</h3>
           </a>
-          <p class="press-context">My role: SVP, Acquisition Marketing at Lionsgate — supported launch marketing for the curated SVOD service.</p>
+            <img class="press-lead" src="images/press/variety-shortlist.png" alt="Tribeca, Lionsgate Launch 'Shortlist' Movie SVOD Service With a Human Touch — Variety" loading="lazy">
+            <p class="press-context">My role: SVP, Acquisition Marketing at Lionsgate — supported launch marketing for the curated SVOD service.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">TechCrunch</span>
-            <span class="press-date">Jul 2015</span>
+            <img class="press-logo" src="images/press/logos/techcrunch.png" alt="TechCrunch logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">TechCrunch</span>
+              <span class="press-date">Jul 2015</span>
+            </div>
           </div>
-          <a class="press-link" href="https://techcrunch.com/2015/07/07/whipclip-raises-over-40-million-for-its-tv-show-and-music-video-clipping-app/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://techcrunch.com/2015/07/07/whipclip-raises-over-40-million-for-its-tv-show-and-music-video-clipping-app/" target="_blank" rel="noopener">
             <h3>Whipclip Raises Over $40 Million For Its TV Show And Music Video Clipping App</h3>
           </a>
-          <p class="press-context">My role: SVP, Marketing at Whipclip — led growth and supported the Series C raise that brought total funding above $60M.</p>
+            <p class="press-context">My role: SVP, Marketing at Whipclip — led growth and supported the Series C raise that brought total funding above $60M.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Adweek</span>
-            <span class="press-date">Jun 2013</span>
+            <img class="press-logo" src="images/press/logos/adweek.png" alt="Adweek logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Adweek</span>
+              <span class="press-date">Jun 2013</span>
+            </div>
           </div>
-          <a class="press-link" href="https://www.adweek.com/performance-marketing/demand-media-acquires-online-retailer-150679/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://www.adweek.com/performance-marketing/demand-media-acquires-online-retailer-150679/" target="_blank" rel="noopener">
             <h3>Demand Media Acquires Online Retailer Society6</h3>
           </a>
-          <p class="press-context">My role: VP, Acquisition Marketing at Demand Media — scaled Society6 from $15M to $50M+ in revenue post-acquisition.</p>
+            <p class="press-context">My role: VP, Acquisition Marketing at Demand Media — scaled Society6 from $15M to $50M+ in revenue post-acquisition.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">AdExchanger</span>
-            <span class="press-date">Jan 2022</span>
+            <img class="press-logo" src="images/press/logos/adexchanger.png" alt="AdExchanger logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">AdExchanger</span>
+              <span class="press-date">Jan 2022</span>
+            </div>
           </div>
-          <a class="press-link" href="https://www.adexchanger.com/the-sell-sider/leaf-group-ceo-details-its-commerce-focused-rebrand-and-acquisition-by-graham-holdings/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://www.adexchanger.com/the-sell-sider/leaf-group-ceo-details-its-commerce-focused-rebrand-and-acquisition-by-graham-holdings/" target="_blank" rel="noopener">
             <h3>Leaf Group CEO Details Its Commerce-Focused Rebrand And Acquisition By Graham Holdings</h3>
           </a>
-          <p class="press-context">My role: Led the early performance-marketing buildout that powered the company's commerce pivot — including Society6, Saatchi Art, and Livestrong.</p>
+            <img class="press-lead" src="images/press/adexchanger-leaf.jpg" alt="Leaf Group CEO Details Its Commerce-Focused Rebrand And Acquisition By Graham Holdings — AdExchanger" loading="lazy">
+            <p class="press-context">My role: Led the early performance-marketing buildout that powered the company's commerce pivot — including Society6, Saatchi Art, and Livestrong.</p>
+          </div>
         </li>
         <li class="press-item reveal">
           <div class="press-meta">
-            <span class="press-pub">Ad Age</span>
-            <span class="press-date">Sep 2011</span>
+            <img class="press-logo" src="images/press/logos/adage.png" alt="Ad Age logo" width="34" height="34" loading="lazy">
+            <div class="press-pubinfo">
+              <span class="press-pub">Ad Age</span>
+              <span class="press-date">Sep 2011</span>
+            </div>
           </div>
-          <a class="press-link" href="https://adage.com/article/media/dating-show-features-advertiser-matchmaker/229685/" target="_blank" rel="noopener">
+          <div class="press-body">
+            <a class="press-link" href="https://adage.com/article/media/dating-show-features-advertiser-matchmaker/229685/" target="_blank" rel="noopener">
             <h3>This Dating Show Features an Advertiser as Matchmaker: Jazzed.com</h3>
           </a>
-          <p class="press-context">My role: Director, Acquisition Marketing at eHarmony — led acquisition strategy across the Jazzed launch and integrated marketing partnerships.</p>
+            <p class="press-context">My role: Director, Acquisition Marketing at eHarmony — led acquisition strategy across the Jazzed launch and integrated marketing partnerships.</p>
+          </div>
         </li>
       </ul>
     </div>
