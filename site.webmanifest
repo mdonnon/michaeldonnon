@@ -1,0 +1,14 @@
+{
+  "name": "Michael Donnon",
+  "short_name": "M. Donnon",
+  "description": "Senior growth and marketing executive — streaming, subscription, and AI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBFAF6",
+  "theme_color": "#11152A",
+  "icons": [
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/images/apple-touch-icon.png?v=2", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
