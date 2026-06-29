@@ -404,6 +404,14 @@
       text-decoration: none; font-weight: 600; margin-top: auto;
     }
     .proj a.link:hover { text-decoration: underline; }
+    .proj-head { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+    .proj-logo { height: 40px; width: auto; max-width: 170px; object-fit: contain; object-position: left center; display: block; }
+    .badge {
+      margin-left: auto;
+      font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.07em; text-transform: uppercase;
+      font-weight: 700; color: var(--signal); background: var(--signal-soft);
+      border: 1px solid var(--signal); border-radius: 999px; padding: 4px 11px; white-space: nowrap; flex-shrink: 0;
+    }
     @media (max-width: 760px) { .proj-grid { grid-template-columns: 1fr; } }
 
 
@@ -719,14 +727,39 @@
       <p class="lede">What happens when a growth marketer can't stop building.</p>
       <div class="proj-grid">
         <div class="proj reveal">
+          <div class="proj-head">
+            <img class="proj-logo" src="images/ventures/melt-labs.png" alt="MELT Labs logo" width="39" height="40" loading="lazy">
+          </div>
           <h3>MELT Labs</h3>
           <p>A consulting practice helping startups nail go-to-market strategy, performance marketing, and AI-driven tooling — from positioning to full MarTech stack architecture.</p>
           <a class="link" href="https://www.melt.biz">melt.biz ↗</a>
         </div>
         <div class="proj reveal">
+          <div class="proj-head">
+            <img class="proj-logo" src="images/ventures/milltag.svg" alt="MillTag logo" width="40" height="40" loading="lazy">
+            <span class="badge">Coming soon</span>
+          </div>
           <h3>Milltag</h3>
-          <p>A manufacturing and logistics SaaS platform built for the steel industry — digitizing tracking, traceability, and workflow for mills, processors, and service centers. Live with active clients moving real tonnage.</p>
-          <a class="link" href="#">milltag.com ↗</a>
+          <p>A manufacturing and logistics SaaS platform built for the steel industry — digitizing tracking, traceability, and workflow for mills, processors, and service centers.</p>
+          <a class="link" href="https://milltag.app">milltag.app ↗</a>
+        </div>
+        <div class="proj reveal">
+          <div class="proj-head">
+            <img class="proj-logo" src="images/ventures/veta.svg" alt="VETA logo" width="40" height="40" loading="lazy">
+            <span class="badge">Coming soon</span>
+          </div>
+          <h3>VETA</h3>
+          <p>A cross-border monetization platform for Spanish-language content owners — turning catalogs and live feeds into U.S.-rate revenue through automated clipping, channel routing, and an archive that re-monetizes on the news cycle.</p>
+          <a class="link" href="https://vetatv.co">vetatv.co ↗</a>
+        </div>
+        <div class="proj reveal">
+          <div class="proj-head">
+            <img class="proj-logo" src="images/ventures/clipa.svg" alt="Clipa.tv logo" width="40" height="40" loading="lazy">
+            <span class="badge">Coming soon</span>
+          </div>
+          <h3>Clipa.tv</h3>
+          <p>A short-form streaming destination for U.S. Latino audiences — premium Latin American news and culture, re-cut into the vertical clip formats people actually watch and share.</p>
+          <a class="link" href="https://clipa.tv">clipa.tv ↗</a>
         </div>
       </div>
     </div>
