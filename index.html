@@ -1173,6 +1173,17 @@
   </footer>
 
   <script>
+    // Open external links (products & link-outs) in a new tab; leave internal anchors and mailto in place
+    document.querySelectorAll('a[href^="http"]').forEach((a) => {
+      if (a.hostname && a.hostname !== location.hostname) {
+        a.target = '_blank';
+        let rel = a.rel || '';
+        if (!/\bnoopener\b/.test(rel)) rel += ' noopener';
+        if (!/\bnoreferrer\b/.test(rel)) rel += ' noreferrer';
+        a.rel = rel.trim();
+      }
+    });
+
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const primaryMenu = document.getElementById('primary-menu');
