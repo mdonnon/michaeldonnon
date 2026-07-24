@@ -433,6 +433,7 @@
     .proj a.link:hover { text-decoration: underline; }
     .proj-head { display: flex; align-items: center; gap: 12px; min-height: 44px; }
     .proj-logo { height: 40px; width: auto; max-width: 170px; object-fit: contain; object-position: left center; display: block; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     .badge {
       margin-left: auto;
       font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.07em; text-transform: uppercase;
@@ -788,10 +789,10 @@
         </div>
         <div class="proj reveal">
           <div class="proj-head">
-            <img class="proj-logo" src="images/ventures/clipa.svg" alt="Clipa.tv logo" width="40" height="40" loading="lazy">
+            <img class="proj-logo" src="images/ventures/clipa-lockup.png" alt="Clipa.tv logo" width="102" height="40" loading="lazy">
             <span class="badge">Coming soon</span>
           </div>
-          <h3>Clipa.tv</h3>
+          <h3 class="sr-only">Clipa.tv</h3>
           <p>A short-form streaming destination for U.S. Latino audiences — premium Latin American news and culture, re-cut into the vertical clip formats people actually watch and share.</p>
           <a class="link" href="https://clipa.tv">clipa.tv ↗</a>
         </div>
