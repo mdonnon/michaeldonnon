@@ -6,6 +6,11 @@
       "has": [{ "type": "host", "value": "www.michaeldonnon.com" }],
       "destination": "https://michaeldonnon.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/blog/pantaya-data-flywheel",
+      "destination": "/blog/lionsgate-svod-data-flywheel",
+      "permanent": true
     }
   ],
   "headers": [
