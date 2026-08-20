@@ -99,6 +99,8 @@ header {
 footer { background: var(--ink); color: var(--paper); padding: 72px 0 40px; margin-top: 0; }
 footer h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-stretch: 80%; max-width: 640px; font-weight: 800; letter-spacing: -0.02em; }
 footer .foot-cta { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+footer .btn { background: var(--signal); color: var(--paper); }
+footer .btn:hover { background: #4059ff; }
 footer .btn.ghost { border: 1.5px solid rgba(251,250,246,0.4); color: var(--paper); background: transparent; }
 footer .btn.ghost:hover { background: var(--paper); color: var(--ink); }
 footer .foot-meta {
