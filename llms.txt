@@ -27,6 +27,12 @@ Michael Donnon builds growth engines that take brands from zero to scale. He spe
 - [Press](https://michaeldonnon.com/#press): Selected media coverage
 - [FAQ](https://michaeldonnon.com/#faq): Common questions
 
+## Blog
+
+Field notes on growth marketing, customer acquisition, subscription and streaming, MarTech, and applying AI across the marketing stack. Index: https://michaeldonnon.com/blog
+
+- [How In-Housing Media Cut eHarmony's CAC by 81%](https://michaeldonnon.com/blog/in-housing-media-cut-cac-81): Why control over your data, bids, and feedback loop — not any single channel — is the most durable growth lever.
+
 ## Expertise
 
 Growth marketing, performance marketing, subscription and streaming growth, customer acquisition (CAC) optimization, customer lifetime value and retention, MarTech and marketing analytics, AI in marketing and marketing automation, direct-to-consumer, media buying, incrementality measurement, media mix modeling, go-to-market strategy, and brand marketing.
