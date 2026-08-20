@@ -31,6 +31,7 @@ Michael Donnon builds growth engines that take brands from zero to scale. He spe
 
 Field notes on growth marketing, customer acquisition, subscription and streaming, MarTech, and applying AI across the marketing stack. Index: https://michaeldonnon.com/blog
 
+- [Clips Rule the Content Universe. Whipclip Was Just Too Early.](https://michaeldonnon.com/blog/whipclip-too-early-for-clips): A reflection on building Whipclip — one of the only legal destinations for IP-licensed clips from major networks and sports leagues — the right thesis about clips in the wrong shape, a few years too early, and how it informs VETA and Clipa.tv today.
 - [How Passion-Driven SVOD Built a Data Flywheel at Lionsgate](https://michaeldonnon.com/blog/lionsgate-svod-data-flywheel): How a portfolio of niche streaming services — Starz, Pantaya, Kevin Hart's Laugh Out Loud, Comic Con HQ, Tribeca Shortlist — each built on a passionate audience, created first-party data that flowed to and from the studio and became a flywheel that made Pantaya the #1 Spanish-language service in the U.S.
 - [How In-Housing Media Cut eHarmony's CAC by 81%](https://michaeldonnon.com/blog/in-housing-media-cut-cac-81): Why control over your data, bids, and feedback loop — not any single channel — is the most durable growth lever.
 
