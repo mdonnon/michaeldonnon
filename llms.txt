@@ -31,6 +31,7 @@ Michael Donnon builds growth engines that take brands from zero to scale. He spe
 
 Field notes on growth marketing, customer acquisition, subscription and streaming, MarTech, and applying AI across the marketing stack. Index: https://michaeldonnon.com/blog
 
+- [The Data Flywheel That Built Pantaya](https://michaeldonnon.com/blog/pantaya-data-flywheel): How Lionsgate's shift from wholesale to direct-to-consumer unlocked first-party customer data, and how centralizing it turned Pantaya into the #1 Spanish-language streaming service in the U.S.
 - [How In-Housing Media Cut eHarmony's CAC by 81%](https://michaeldonnon.com/blog/in-housing-media-cut-cac-81): Why control over your data, bids, and feedback loop — not any single channel — is the most durable growth lever.
 
 ## Expertise
